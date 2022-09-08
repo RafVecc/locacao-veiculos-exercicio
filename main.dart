@@ -1,6 +1,6 @@
 import 'dart:io';
-import 'menu_principal.dart';
-import 'menu_cadastros.dart';
+import 'menus/menu_principal.dart';
+import 'menus/menu_cadastros.dart';
 
 
 var menuPrincipalInstancia = MenuPrincipal();
