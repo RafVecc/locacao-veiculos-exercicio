@@ -1,10 +1,9 @@
 import 'dart:io';
 import 'locacao_informacoes.dart';
 
-
+var listaLocacaoInformacoes = <LocacaoInformacoes>[];
 class LocacaoCadastro{
   void locacaoCadastro(){
-   var listaLocacaoInformacoes = <LocacaoInformacoes>[];
    var locacaoCadastroInformacoesInstancia = LocacaoInformacoes();
    //var novoFormatoData = DateFormat('dd-MM-yyyy');
    locacaoCadastroInformacoesInstancia.dataSaidaLocacao = DateTime.now();

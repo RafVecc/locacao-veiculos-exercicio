@@ -1,10 +1,9 @@
 import 'dart:io';
 import 'funcionario_informacoes.dart';
 
-
+var listaFuncionarioInformacoes = <FuncionariosInformacoes>[];
 class FuncionarioCadastro{
   void funcionarioCadastro(){
-   var listaFuncionarioInformacoes = <FuncionariosInformacoes>[];
    var funcionarioCadastroInformacoesInstancia = FuncionariosInformacoes();
    print('Informe o nome do funcionário');
    funcionarioCadastroInformacoesInstancia.nomeFuncionario = stdin.readLineSync();

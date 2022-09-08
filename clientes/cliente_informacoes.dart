@@ -4,5 +4,6 @@ class ClienteInformacoes{
   double? cpfCliente;
   double? telefoneCliente;
   String? enderecoCliente;
+  double? totalPagarCliente;
 
 }
