@@ -4,11 +4,11 @@ import 'marca_informacoes.dart';
 
 class MarcaCadastro{
   void marcaCadastro(){
-    var listaMarcaInformacao = <MarcaInformacoes>[];
+    var listaMarcaInformacoes = <MarcaInformacoes>[];
     var marcaCadastroInformacoesInstancia = MarcaInformacoes();
     print('Informe o nome da marca');
     marcaCadastroInformacoesInstancia.nomeMarca = stdin.readLineSync();
-    listaMarcaInformacao.add(marcaCadastroInformacoesInstancia);
+    listaMarcaInformacoes.add(marcaCadastroInformacoesInstancia);
 
   }
 }
