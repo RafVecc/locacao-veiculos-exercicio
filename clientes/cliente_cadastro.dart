@@ -15,5 +15,6 @@ class ClienteCadastro{
     print('Informe o endereço do cliente');
     clienteCadastroInformacoesInstancia.enderecoCliente = stdin.readLineSync();
     listaClienteInformacoes.add(clienteCadastroInformacoesInstancia);
+
   }
 }
