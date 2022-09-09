@@ -6,6 +6,13 @@ class LocacaoCadastro{
   void locacaoCadastro(){
    var locacaoCadastroInformacoesInstancia = LocacaoInformacoes();
    //var novoFormatoData = DateFormat('dd-MM-yyyy');
+   print('Informe o Id do Cliente: ');
+   locacaoCadastroInformacoesInstancia.idClienteLocacao = int.parse(stdin.readLineSync()!);
+   print('Informe o Id do Funcionário: ');
+   locacaoCadastroInformacoesInstancia.idFuncionarioLocacao = int.parse(stdin.readLineSync()!);
+   print('Informe o Id do Veículo: ');
+   locacaoCadastroInformacoesInstancia.idVeiculoLocacao = int.parse(stdin.readLineSync()!);
+
    locacaoCadastroInformacoesInstancia.dataSaidaLocacao = DateTime.now();
    print('Informe a quantidade de dias de locação');
    locacaoCadastroInformacoesInstancia.diasLocadosLocacao = int.parse(stdin.readLineSync()!);
