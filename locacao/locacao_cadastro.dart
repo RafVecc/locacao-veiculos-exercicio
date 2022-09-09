@@ -1,10 +1,12 @@
 import 'dart:io';
+import '../verificacoes/verificacao_locacao.dart';
 import 'locacao_informacoes.dart';
 
 var listaLocacaoInformacoes = <LocacaoInformacoes>[];
 class LocacaoCadastro{
   void locacaoCadastro(){
    var locacaoCadastroInformacoesInstancia = LocacaoInformacoes();
+   var verificacaoLocacaoInstancia = VerificacoesLocacao();
    //var novoFormatoData = DateFormat('dd-MM-yyyy');
    print('Informe o Id do Cliente: ');
    locacaoCadastroInformacoesInstancia.idClienteLocacao = int.parse(stdin.readLineSync()!);
@@ -12,15 +14,21 @@ class LocacaoCadastro{
    locacaoCadastroInformacoesInstancia.idFuncionarioLocacao = int.parse(stdin.readLineSync()!);
    print('Informe o Id do Veículo: ');
    locacaoCadastroInformacoesInstancia.idVeiculoLocacao = int.parse(stdin.readLineSync()!);
-
-   locacaoCadastroInformacoesInstancia.dataSaidaLocacao = DateTime.now();
-   print('Informe a quantidade de dias de locação');
-   locacaoCadastroInformacoesInstancia.diasLocadosLocacao = int.parse(stdin.readLineSync()!);
-   locacaoCadastroInformacoesInstancia.dataEntregaLocacao = locacaoCadastroInformacoesInstancia.dataSaidaLocacao.add(
-       Duration(days: locacaoCadastroInformacoesInstancia.diasLocadosLocacao!)
-   );
-   print('O veículo deve ser entregue no dia: ${locacaoCadastroInformacoesInstancia.dataEntregaLocacao}');
-   listaLocacaoInformacoes.add(locacaoCadastroInformacoesInstancia);
-
+   if(verificacaoLocacaoInstancia.verificacaoIdClienteLocacao() == true &&
+       verificacaoLocacaoInstancia.verificacaoIdFuncionarioLocacao() == true &&
+       verificacaoLocacaoInstancia.verificacaoIdVeiculoLocacao() == true
+   ){
+    locacaoCadastroInformacoesInstancia.dataSaidaLocacao = DateTime.now();
+    print('Informe a quantidade de dias de locação');
+    locacaoCadastroInformacoesInstancia.diasLocadosLocacao =
+        int.parse(stdin.readLineSync()!);
+    locacaoCadastroInformacoesInstancia.dataEntregaLocacao =
+        locacaoCadastroInformacoesInstancia.dataSaidaLocacao.add(
+            Duration(
+                days: locacaoCadastroInformacoesInstancia.diasLocadosLocacao!)
+        );
+    print('O veículo deve ser entregue no dia: ${locacaoCadastroInformacoesInstancia.dataEntregaLocacao}');
+    listaLocacaoInformacoes.add(locacaoCadastroInformacoesInstancia);
+   }
   }
 }
