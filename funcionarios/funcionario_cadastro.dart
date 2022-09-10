@@ -6,7 +6,7 @@ class FuncionarioCadastro{
   int idFuncionario = 1;
   void funcionarioCadastro(){
    var funcionarioCadastroInformacoesInstancia = FuncionariosInformacoes();
-   print('Id do cliente: ${idFuncionario}');
+   print('Id do funcionário: ${idFuncionario}');
    funcionarioCadastroInformacoesInstancia.codigoFuncionario = idFuncionario;
    print('Informe o nome do funcionário');
    funcionarioCadastroInformacoesInstancia.nomeFuncionario = stdin.readLineSync();

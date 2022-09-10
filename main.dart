@@ -1,9 +1,8 @@
 import 'dart:io';
-import 'menus/menu_principal.dart';
-import 'menus/menu_cadastros.dart';
 
+import 'execucao_menus/execucao_menu_principal.dart';
 
+var execucaoMain = ExecucaoMenuPrincipal();
 void main(){
-
-
+  execucaoMain.execucaoMenuPrincipal();
 }
