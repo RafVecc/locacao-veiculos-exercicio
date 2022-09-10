@@ -17,7 +17,7 @@ class RelatorioFuncionario{
         }
       }
       int x = idFuncionarioContador;
-      print('Nome do funcionário: ${listaFuncionarioInformacoes[x-1].nomeFuncionario}'
+      print('Nome do funcionário: ${listaFuncionarioInformacoes[x].nomeFuncionario}'
           'Total de locações realizadas: ${contadorFuncionario}');
     }
   }

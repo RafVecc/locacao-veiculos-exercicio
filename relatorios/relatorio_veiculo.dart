@@ -19,9 +19,9 @@ class RelatorioVeiculo{
         }
       }
       int y = idVeiculoContador;
-      print('Código do Veículo: ${listaVeiculosInformacoes[y-1].codigoVeiculo}'
-            'Modelo: ${listaModeloInformacoes[y-1].nomeModelo}'
-            'Marca: ${listaMarcaInformacoes[y-1].nomeMarca}'
+      print('Código do Veículo: ${listaVeiculosInformacoes[y].codigoVeiculo}'
+            'Modelo: ${listaModeloInformacoes[y].nomeModelo}'
+            'Marca: ${listaMarcaInformacoes[y].nomeMarca}'
             'Quantidade de locações: ${contadorVeiculos}');
     }
   }

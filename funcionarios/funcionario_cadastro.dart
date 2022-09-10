@@ -3,7 +3,7 @@ import 'funcionario_informacoes.dart';
 
 var listaFuncionarioInformacoes = <FuncionariosInformacoes>[];
 class FuncionarioCadastro{
-  int idFuncionario = 1;
+  int idFuncionario = 0;
   void funcionarioCadastro(){
    var funcionarioCadastroInformacoesInstancia = FuncionariosInformacoes();
    print('Id do funcionário: ${idFuncionario}');

@@ -5,33 +5,33 @@ import '../veiculos/veiculos_cadastro.dart';
 
 
 class VerificacoesLocacao {
-  bool verificacaoIdClienteLocacao() {
+  bool verificacaoIdClienteLocacao(idCliente) {
     bool verificarCliente = false;
     for (int i = 0; i < listaClienteInformacoes.length; i++) {
       if (listaClienteInformacoes[i].codigoCliente ==
-          listaLocacaoInformacoes[i].idClienteLocacao) {
+          idCliente) {
         verificarCliente = true;
         break;
       }
     }return verificarCliente;
   }
 
-  bool verificacaoIdVeiculoLocacao() {
+  bool verificacaoIdVeiculoLocacao(idVeiculo) {
     bool verificarVeiculo = false;
     for (int i = 0; i < listaVeiculosInformacoes.length; i++) {
       if (listaVeiculosInformacoes[i].codigoVeiculo ==
-          listaLocacaoInformacoes[i].idVeiculoLocacao) {
+          idVeiculo) {
         verificarVeiculo = true;
         break;
       }
     }return verificarVeiculo;
   }
 
-  bool verificacaoIdFuncionarioLocacao() {
+  bool verificacaoIdFuncionarioLocacao(idFuncionario) {
     bool verificarFuncionario = false;
     for (int i = 0; i < listaFuncionarioInformacoes.length; i++) {
       if (listaFuncionarioInformacoes[i].codigoFuncionario ==
-          listaLocacaoInformacoes[i].idFuncionarioLocacao) {
+          idFuncionario) {
         verificarFuncionario = true;
         break;
       }

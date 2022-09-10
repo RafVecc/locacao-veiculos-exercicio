@@ -3,7 +3,7 @@ import 'marca_informacoes.dart';
 
 var listaMarcaInformacoes = <MarcaInformacoes>[];
 class MarcaCadastro{
-  int idMarca = 1;
+  int idMarca = 0;
   void marcaCadastro(){
     var marcaCadastroInformacoesInstancia = MarcaInformacoes();
     print('Id da marca: ${idMarca}');

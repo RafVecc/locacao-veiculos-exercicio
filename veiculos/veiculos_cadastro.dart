@@ -6,7 +6,7 @@ import 'veiculos_informacoes.dart';
 var listaVeiculosInformacoes = <VeiculosInformacoes>[];
 
 class VeiculosCadastro{
-  int idVeiculo = 1;
+  int idVeiculo = 0;
   void veiculosCadastro(){
     var veiculosCadastroInformacoesInstancia = VeiculosInformacoes();
     var verificacaoVeiculosInstancia = VerificacoesVeiculos();
@@ -16,8 +16,8 @@ class VeiculosCadastro{
     veiculosCadastroInformacoesInstancia.idMarcaVeiculo = int.parse(stdin.readLineSync()!);
     print('Informe o Id do modelo');
     veiculosCadastroInformacoesInstancia.idModeloVeiculo = int.parse(stdin.readLineSync()!);
-    if(verificacaoVeiculosInstancia.verificacaoIdMarcaVeiculo() == true &&
-        verificacaoVeiculosInstancia.verificacaoIdModeloVeiculo() == true
+    if(verificacaoVeiculosInstancia.verificacaoIdMarcaVeiculo(veiculosCadastroInformacoesInstancia.idMarcaVeiculo) == true &&
+        verificacaoVeiculosInstancia.verificacaoIdModeloVeiculo(veiculosCadastroInformacoesInstancia.idModeloVeiculo) == true
     ){
       print('Informe a quilometragem do veículo');
       veiculosCadastroInformacoesInstancia.kmRodadoVeiculo =

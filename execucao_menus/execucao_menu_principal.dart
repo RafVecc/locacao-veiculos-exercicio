@@ -4,12 +4,13 @@ import '../locacao/locacao_cadastro.dart';
 import '../menus/menu_principal.dart';
 import '../menus/menu_relatorios.dart';
 import 'execucao_menu_cadastro.dart';
+import 'execucao_menu_relatorio.dart';
 
 
 var menuPrincipalInstancia = MenuPrincipal();
 var execucaoMenuCadastro = ExecucaoMenuCadastro();
 var execucaoLocacaoCadastro = LocacaoCadastro();
-//var execucaoMenuRelatorio = MenuRelatorios();
+var execucaoMenuRelatorio = ExecucaoMenuRelatorio();
 
 class ExecucaoMenuPrincipal{
   int? opcao;
@@ -26,7 +27,7 @@ class ExecucaoMenuPrincipal{
             execucaoLocacaoCadastro.locacaoCadastro();
             break;
           case 3:
-            //execucaoMenuRelatorio.menuRelatorios();
+            execucaoMenuRelatorio.execucaoMenuRelatorio();
             break;
           case 4:
             print("Programa encerrado!");

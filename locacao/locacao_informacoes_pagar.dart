@@ -1,0 +1,3 @@
+class TotalPagar{
+  double? totalPagar;
+}

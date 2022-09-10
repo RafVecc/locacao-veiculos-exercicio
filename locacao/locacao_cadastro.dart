@@ -14,18 +14,18 @@ class LocacaoCadastro{
    locacaoCadastroInformacoesInstancia.idFuncionarioLocacao = int.parse(stdin.readLineSync()!);
    print('Informe o Id do Veículo: ');
    locacaoCadastroInformacoesInstancia.idVeiculoLocacao = int.parse(stdin.readLineSync()!);
-   if(verificacaoLocacaoInstancia.verificacaoIdClienteLocacao() == true &&
-       verificacaoLocacaoInstancia.verificacaoIdFuncionarioLocacao() == true &&
-       verificacaoLocacaoInstancia.verificacaoIdVeiculoLocacao() == true
+   if(verificacaoLocacaoInstancia.verificacaoIdClienteLocacao(locacaoCadastroInformacoesInstancia.idClienteLocacao) == true &&
+       verificacaoLocacaoInstancia.verificacaoIdFuncionarioLocacao(locacaoCadastroInformacoesInstancia.idFuncionarioLocacao) == true &&
+       verificacaoLocacaoInstancia.verificacaoIdVeiculoLocacao(locacaoCadastroInformacoesInstancia.idVeiculoLocacao) == true
    ){
     locacaoCadastroInformacoesInstancia.dataSaidaLocacao = DateTime.now();
     print('Informe a quantidade de dias de locação');
     locacaoCadastroInformacoesInstancia.diasLocadosLocacao =
-        int.parse(stdin.readLineSync()!);
+        double.parse(stdin.readLineSync()!);
     locacaoCadastroInformacoesInstancia.dataEntregaLocacao =
         locacaoCadastroInformacoesInstancia.dataSaidaLocacao.add(
             Duration(
-                days: locacaoCadastroInformacoesInstancia.diasLocadosLocacao!)
+                days: locacaoCadastroInformacoesInstancia.diasLocadosLocacao!.toInt())
         );
     print('O veículo deve ser entregue no dia: ${locacaoCadastroInformacoesInstancia.dataEntregaLocacao}');
     listaLocacaoInformacoes.add(locacaoCadastroInformacoesInstancia);

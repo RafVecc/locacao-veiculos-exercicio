@@ -3,7 +3,7 @@ import 'modelo_informacoes.dart';
 
 var listaModeloInformacoes = <ModeloInformacoes>[];
 class ModeloCadastro{
-  int idModelo = 1;
+  int idModelo = 0;
   void modeloCadastro(){
     var modeloCadastroInformacoesInstancia = ModeloInformacoes();
     print('Id do modelo: ${idModelo}');

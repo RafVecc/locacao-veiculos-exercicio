@@ -4,7 +4,7 @@ import 'cliente_informacoes.dart';
 
 var listaClienteInformacoes = <ClienteInformacoes>[];
 class ClienteCadastro{
-  int idCliente = 1;
+  int idCliente = 0;
   void clienteCadastro(){
     var clienteCadastroInformacoesInstancia = ClienteInformacoes();
     print('Id do cliente: ${idCliente}');
