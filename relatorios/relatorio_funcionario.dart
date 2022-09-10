@@ -6,7 +6,7 @@ import '../locacao/locacao_cadastro.dart';
 class RelatorioFuncionario{
   void relatorioFuncionario(){
     int? idFuncionarioContador;
-    print('Informe o funcionário');
+    print('Informe o id do funcionário');
     idFuncionarioContador = int.parse(stdin.readLineSync()!);
     for(int i = 0; i < listaFuncionarioInformacoes.length; i ++) {
       int contadorFuncionario = 0;
@@ -16,9 +16,7 @@ class RelatorioFuncionario{
           contadorFuncionario += 1;
         }
       }
-      int? x;
-      print('Informe o Id do Funcionário');
-      x = int.parse(stdin.readLineSync()!);
+      int x = idFuncionarioContador;
       print('Nome do funcionário: ${listaFuncionarioInformacoes[x-1].nomeFuncionario}'
           'Total de locações realizadas: ${contadorFuncionario}');
     }
