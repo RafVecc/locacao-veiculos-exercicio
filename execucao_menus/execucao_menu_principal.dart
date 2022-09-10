@@ -33,7 +33,7 @@ class ExecucaoMenuPrincipal{
             break;
         }
       }catch(e){
-        print('Opção inválida 2');
+        print('Opção inválida');
       }
     }
   }
